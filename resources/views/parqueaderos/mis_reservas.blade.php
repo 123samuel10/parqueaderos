@@ -24,6 +24,7 @@
             <tr>
                 <th>Parqueadero</th>
                 <th>Ubicación</th>
+                 <th>Fecha</th>
                 <th>Hora Inicio</th>
                 <th>Hora Fin</th>
             </tr>
@@ -33,6 +34,7 @@
             <tr>
                 <td>{{ $reserva->parqueadero->nombre }}</td>
                 <td>{{ $reserva->parqueadero->ubicacion }}</td>
+                 <td>{{ \Carbon\Carbon::parse($reserva->hora_inicio)->format('d/m/Y') }}</td>
          <td>{{ \Carbon\Carbon::parse($reserva->hora_inicio)->format('h:i A') }}</td>
 <td>{{ \Carbon\Carbon::parse($reserva->hora_fin)->format('h:i A') }}</td>
             </tr>
